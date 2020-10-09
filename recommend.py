@@ -3,7 +3,7 @@ import math
 import sys
 from decimal import Decimal
 
-conn=mdb.connect('localhost','testuser','test123','testdb')
+conn=mdb.connect('localhost','root','password','testdb')
 c=conn.cursor()
 
 user_id=str(sys.argv[1])
@@ -42,11 +42,13 @@ beta=0.0
 gamma=0.0
 
 size=len(locations)
-
+#print("Length of locations : " + str(size)); 
 outp=""
 
+#print(userids);
+#print(locations);
 j=0
-while j<size:
+while j<size-1:
     userb=int(userids[j][0])
     if(user_id != userb):
         #print(j)
@@ -69,6 +71,7 @@ while j<size:
         if(d<=radius):
             #Distance --> Alpha
             alpha=float( 50 * float(1-float(d/radius)) )
+            #print(alpha)
             
             #Interests --> Beta
             beta=0.0
@@ -101,4 +104,5 @@ while j<size:
     j=j+1
 #While ends here
 #print Decimal('1.248765385376538583753')+Decimal('2.387638768583658653765')
-print outp
+#print("***************");
+print(outp)

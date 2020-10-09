@@ -1,0 +1,169 @@
+	.container{
+		width: auto;
+		height: auto;
+	}
+	.left-sidebar{
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 300px;
+		overflow: auto;
+	}
+	.profile-area{
+		width: 100%;
+		padding: 20px;
+		border-bottom: 1px solid #CADCE6;
+		background-color: #f2f5f7;
+		height: 200px;
+	}
+	.profile-area 
+	.list{
+		width: 100%;
+	}
+
+	#list{
+		width: 100%;
+	}
+	#list button{
+		background-color: #3498db;
+		width: 30px;
+		height: 20px;
+		margin-top: 20px;
+		padding-bottom: 22px;
+		font-family: 'Open Sans';
+		font-weight: 500;
+		font-size: 14px;
+		color: white;
+		border: 0;
+		transition: 0.05s ease-in-out;
+	    -moz-transition: 0.05s ease-in-out;
+	    -webkit-transition: 0.05s ease-in-out;
+	}
+	#list button:hover{
+		background-color: #2980b9;
+	}
+	.get-recommendation{
+		width: 100%;
+		height: auto;
+	}
+	.get-recommendation button{
+		font-family: 'Open Sans';
+		font-size: 18px;
+		font-weight: 300;
+		width: 100%;
+		border: 0;
+		margin: 0;
+		height: 40px;
+		background-color: #3498db;
+		padding: 5px;
+		color: white;
+		text-align: center;
+		transition: 0.05s ease-in-out;
+	    -moz-transition: 0.05s ease-in-out;
+	    -webkit-transition: 0.05s ease-in-out;
+	    cursor: pointer;
+	}
+	.get-recommendation button:hover{
+		background-color: #2980b9;
+	}
+	.right-area{
+		background-color: #f2f5f7;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 300px;
+		right: 0;
+		bottom: 0;
+		border-left: 1px solid #CADCE6;
+	}
+	#map{
+		width: 100%;
+		min-height: 600px;
+	}
+	.topbar{
+		height: 70px;
+		width: 100%;
+		overflow: hidden;
+		background-color: white;
+		border-bottom: 1px solid #CADCE6;
+	}
+	.radius, .radius-text, .id, .id-text, .radius-miles{
+		display: inline-block;
+		margin: 20px;
+		margin-right: 0;
+	}
+	.radius-miles{
+		margin: 5px;
+	}
+	.id-text, .radius-text{
+		font-family: 'Open Sans';
+		font-size: 18px;
+		font-weight: 400;
+		width: 100px;
+		border: 1px solid #ebebeb;
+		color: #ebebeb;
+		height: 30px;
+		padding-right: 10px;
+		text-align: right;
+	}
+	.radius, .id, .radius-miles{
+		font-family: 'Open Sans';
+		font-size: 18px;
+		font-weight: 400;
+		
+	}
+
+	.list-element{
+		font-weight: 400;
+		font-family: 'Open Sans';
+		font-size: 18px;
+		width: 100%;
+		height: 60px;
+		border-bottom: 1px solid #CADCE6;
+	}
+	.uidClass, .affinityClass, .distanceClass{
+		float: left;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 5px;
+		padding-right: 10px;
+	}
+	.affinityClass, .distanceClass{
+		padding-left: 20px;
+	}
+	.latClass, .lonClass{
+		display: none;
+	}
+	#infowindow-div, #profile-div{
+		min-width:100px;
+		height: 120px;
+		font-size: 18px;
+		font-weight: 300;
+		font-family: 'Open Sans';
+	}
+	#infowindow-div .user-profile .name, #profile-div .user-profile .name{
+		font-weight: 700;
+		font-size: 18px;
+		display: block;
+	}
+	#infowindow-div .user-profile .age,#infowindow-div .user-profile .gender,#infowindow-div .user-profile .hometown, #profile-div .user-profile span{
+		display: inline-block;
+		padding-top: 5px;
+		margin-right: 5px;
+		font-size: 15px;
+	}
+	#infowindow-div .job-profile,#profile-div .profile-job-div{
+		font-size: 15px;
+		margin-top: 5px;
+		color: #7e7b7b;
+	}
+	#infowindow-div .job-profile .organization,#infowindow-div .job-profile .designation, #profile-div .profile-job-div .organization,#profile-div .profile-job-div .designation{
+		font-size: 15px;
+		font-weight: 300;
+		color: black;
+	}
+	#infowindow-div .user-interests, #profile-div .user-interests-div{
+		font-size: 15px;
+		margin-top: 5px;
+	}

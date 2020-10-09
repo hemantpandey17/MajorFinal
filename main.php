@@ -33,7 +33,8 @@
 			<input class="id-text" type="text" value="1">
 			<span class="radius">Radius:</span>
 			<input class="radius-text" type="text" value="3">
-			<span class="radius-miles">miles</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp <a href="index.php">Logout</a>
+			<span class="radius-miles">miles</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp 
+<button onclick="window.location.href='logout.php'">Logout</button>
 		</div>
 
 		<div class="right-content">
@@ -56,7 +57,7 @@
         
       }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq7wxEOm7rUlYlskJ9KP-stet-JiqQP30&callback=initMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALCFr_GQQWg0jTmC-KXDIj0p0Oqa3B3tw&callback=initMap"
     async defer></script>
 <script src="script/myscriptv3.js"></script>
 </body>

@@ -12,11 +12,10 @@ $rad = $_POST['rd'];
 
 #$outs = shell_exec("python C:\Python27\ recommend.py $uid $lat ##$lon $rad");
 #echo $outs;
+#echo '<script>console.log("I am here")</script>';
 
-
-
-
-$outs = 'python C:\Python27\recommend.py ' . $uid . ' ' . $lat . ' ' . $lon . ' ' . $rad;
+$outs = '/Users/hemant/anaconda2/bin/python recommend.py ' . $uid . ' ' . $lat . ' ' . $lon . ' ' . $rad;
 $output = shell_exec($outs);
+#echo '<script>console.log($output)</script>';
 echo $output;
 ?>

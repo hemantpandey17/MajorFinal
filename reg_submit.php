@@ -5,48 +5,48 @@ if(isset($_SESSION['user'])!="")
 {
  header("Location: loc.php");
 }
-$connection = mysql_connect("localhost", "root","");
-mysql_select_db('testdb', $connection);
+$connection = mysqli_connect("localhost", "root","password");
+mysqli_select_db($connection,'testdb');
 
 if(isset($_POST['submit']))
 {
- //$uid = mysql_real_escape_string($_POST['uid']);
- $email = mysql_real_escape_string($_POST['email']);
- $upass = mysql_real_escape_string($_POST['pass']);
- $name = mysql_real_escape_string($_POST['name']);
- $age = mysql_real_escape_string($_POST['age']);
- $gender = mysql_real_escape_string($_POST['gender']);
- $org = mysql_real_escape_string($_POST['org']);
- $jd = mysql_real_escape_string($_POST['jd']);
- $ht = mysql_real_escape_string($_POST['hometown']);
+ //$uid = mysqli_real_escape_string($connection,$_POST['uid']);
+ $email = mysqli_real_escape_string($connection,$_POST['email']);
+ $upass = mysqli_real_escape_string($connection,$_POST['pass']);
+ $name = mysqli_real_escape_string($connection,$_POST['name']);
+ $age = mysqli_real_escape_string($connection,$_POST['age']);
+ $gender = mysqli_real_escape_string($connection,$_POST['gender']);
+ $org = mysqli_real_escape_string($connection,$_POST['org']);
+ $jd = mysqli_real_escape_string($connection,$_POST['jd']);
+ $ht = mysqli_real_escape_string($connection,$_POST['hometown']);
  $interests = $_POST['interests'];
- $latitude=mysql_real_escape_string($_POST['lati']);
- $longitude=mysql_real_escape_string($_POST['longi']);
+ $latitude=mysqli_real_escape_string($connection,$_POST['lati']);
+ $longitude=mysqli_real_escape_string($connection,$_POST['longi']);
  
  $users_tb = "INSERT INTO users
 ( username, password, name, age, gender, hometown)
 VALUES('$email','$upass', '$name','$age','$gender', '$ht')";
-mysql_query($users_tb) or die(mysql_error());
+mysqli_query($connection,$users_tb) or die(mysqli_error($connection));
 
 
  $users_info_tb = "INSERT INTO userprof
            (organization, job_profile)
         VALUES( '$org', '$jd')";
-mysql_query($users_info_tb) or die(mysql_error());
+mysqli_query($connection,$users_info_tb) or die(mysqli_error($connection));
 
 
 $users_int = "INSERT INTO userint
 ( i1, i2, i3, i4, i5)
 VALUES('$interests[0]','$interests[1]', '$interests[2]', '$interests[3]', '$interests[4]')";
-mysql_query($users_int) or die(mysql_error());
+mysqli_query($connection,$users_int) or die(mysqli_error($connection));
 
 $userloc_info_tb = "INSERT INTO userloc
            (lati, longi)
         VALUES( '$latitude', '$longitude')";
-mysql_query($userloc_info_tb) or die(mysql_error());
+mysqli_query($connection,$userloc_info_tb) or die(mysqli_error($connection));
 
 
-printf("Please note down your USER ID number %d\n", mysql_insert_id());
+printf("Please note down your USER ID number %d\n", mysqli_insert_id($connection));
 echo "<br>";
 echo "<br>";
 echo "To login click here <a href='index.php'>Login</a>"; 
@@ -56,6 +56,3 @@ echo "To login click here <a href='index.php'>Login</a>";
  
 <body style="background-image: url('bgr1.jpg')">
 
-
-
- 

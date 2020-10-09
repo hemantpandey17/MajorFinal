@@ -1,7 +1,7 @@
 <?php
 $index = $_POST['in'];
 //To establish a link to the database
-$link = new mysqli('localhost','root','','testdb');
+$link = new mysqli('localhost','root','password','testdb');
 //For a select query
 $result_profile = $link->query("SELECT * FROM users WHERE user_id=$index");
 $result_work = $link->query("SELECT * FROM userprof WHERE user_id=$index");
